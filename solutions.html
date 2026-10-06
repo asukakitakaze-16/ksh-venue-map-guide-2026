@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>課題から探す出展者・製品 | 九州・沖縄 宿泊外食産業展</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./venue-guide.css">
+</head>
+<body class="solution-page">
+  <header class="solution-header">
+    <div class="solution-header__inner">
+      <a href="./visit.html#problem" class="solution-header__back">← 来場をご検討の方へ戻る</a>
+      <p>第8回 九州・沖縄 宿泊外食産業展<br><span>第2回 アジア食品輸出展</span></p>
+    </div>
+  </header>
+
+  <main>
+    <section class="solution-hero">
+      <div class="solution-inner">
+        <span class="solution-hero__en">FIND YOUR SOLUTION</span>
+        <h1>課題から出展者・製品を探す</h1>
+        <p>いま抱えている課題を選ぶと、解決のヒントとなる製品・サービスを扱う出展者を確認できます。</p>
+      </div>
+    </section>
+
+    <section class="solution-content">
+      <div class="solution-inner">
+        <nav class="solution-tabs" aria-label="課題を選択">
+          <a href="?challenge=staffing" data-challenge="staffing">人手不足・省人化 <span></span></a>
+          <a href="?challenge=renovation" data-challenge="renovation">改修・リノベ <span></span></a>
+          <a href="?challenge=inbound" data-challenge="inbound">インバウンド <span></span></a>
+        </nav>
+
+        <div class="solution-result-head">
+          <div>
+            <span class="solution-result-head__label">SELECTED CHALLENGE</span>
+            <h2 id="solution-title"></h2>
+            <p id="solution-lead"></p>
+          </div>
+          <label class="solution-search">
+            <span>リスト内検索</span>
+            <input id="solution-search" type="search" placeholder="会社名・製品説明・ブース番号">
+          </label>
+        </div>
+
+        <p class="solution-count"><strong id="solution-count">0</strong>社を表示しています</p>
+        <div id="solution-list" class="solution-list" aria-live="polite"></div>
+
+        <aside class="solution-source-note">
+          <strong>掲載について</strong>
+          <p>公式Webガイドに登録された会社名・製品説明等を、課題に関連する複数キーワードで抽出し、重複を除いて掲載しています。最新情報と詳細は各社の公式Webガイドページをご確認ください。</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <script src="./solution-data.js"></script>
+  <script>
+    (() => {
+      const data = window.KSH_SOLUTION_DATA || {};
+      const params = new URLSearchParams(location.search);
+      const requested = params.get('challenge');
+      const challenge = data[requested] ? requested : 'staffing';
+      const current = data[challenge];
+      const title = document.getElementById('solution-title');
+      const lead = document.getElementById('solution-lead');
+      const count = document.getElementById('solution-count');
+      const list = document.getElementById('solution-list');
+      const search = document.getElementById('solution-search');
+
+      document.documentElement.style.setProperty('--solution-color', current.color);
+      title.textContent = current.title;
+      lead.textContent = current.lead;
+
+      document.querySelectorAll('.solution-tabs a').forEach((tab) => {
+        const key = tab.dataset.challenge;
+        tab.querySelector('span').textContent = `${data[key].companies.length}社`;
+        if (key === challenge) tab.setAttribute('aria-current', 'page');
+      });
+
+      const escapeHtml = (value) => String(value || '').replace(/[&<>'"]/g, (char) => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;'
+      })[char]);
+
+      const render = () => {
+        const keyword = search.value.trim().toLowerCase();
+        const companies = current.companies.filter((company) => {
+          if (!keyword) return true;
+          return [company.name, company.booth, company.summary, company.matchedTerms.join(' ')]
+            .join(' ').toLowerCase().includes(keyword);
+        });
+
+        count.textContent = companies.length;
+        if (!companies.length) {
+          list.innerHTML = '<p class="solution-empty">該当する出展者が見つかりませんでした。</p>';
+          return;
+        }
+
+        list.innerHTML = companies.map((company) => `
+          <article class="solution-card">
+            <div class="solution-card__logo">
+              ${company.image
+                ? `<img src="${escapeHtml(company.image)}" alt="" loading="lazy">`
+                : '<span>NO IMAGE</span>'}
+            </div>
+            <div class="solution-card__body">
+              <div class="solution-card__meta">
+                <span>ブース ${escapeHtml(company.booth)}</span>
+                ${company.matchedTerms.map((term) => `<span>${escapeHtml(term)}</span>`).join('')}
+              </div>
+              <h3>${escapeHtml(company.name)}</h3>
+              <p>${escapeHtml(company.summary || '出展内容の詳細は公式Webガイドでご確認ください。')}</p>
+              <a href="${escapeHtml(company.url)}" target="_blank" rel="noopener">公式Webガイドで詳細を見る →</a>
+            </div>
+          </article>
+        `).join('');
+      };
+
+      search.addEventListener('input', render);
+      render();
+    })();
+  </script>
+</body>
+</html>

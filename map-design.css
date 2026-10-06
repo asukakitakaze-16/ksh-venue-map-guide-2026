@@ -1,0 +1,86 @@
+:root {
+  color: #152d4c;
+  background: #e8eef4;
+  font-family: "Helvetica Neue", "Noto Sans JP", "Yu Gothic", YuGothic, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 7%, rgba(50, 132, 184, .14), transparent 28%),
+    linear-gradient(135deg, #edf2f6, #dae4ed);
+}
+
+.brochure-preview {
+  width: min(1540px, calc(100% - 48px));
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 22px 65px rgba(14, 45, 78, .18);
+}
+
+.brochure-preview__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 24px 32px;
+  color: #fff;
+  background: linear-gradient(125deg, #0b2d54, #1b5b87);
+}
+
+.brochure-preview__header span {
+  color: #86ccee;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .2em;
+}
+
+.brochure-preview__header h1 {
+  margin: 5px 0 0;
+  font-size: clamp(20px, 2.5vw, 36px);
+  letter-spacing: .02em;
+}
+
+.brochure-preview__header p {
+  margin: 0 0 4px;
+  color: rgba(255,255,255,.72);
+  font-size: 13px;
+}
+
+.brochure-preview__map { margin: 0; padding: 20px; background: #f8fafc; }
+.brochure-preview__map a { display: block; overflow: hidden; border-radius: 12px; background: #fff; box-shadow: 0 8px 25px rgba(19, 49, 81, .1); }
+.brochure-preview__map img { display: block; width: 100%; height: auto; }
+.brochure-preview__map figcaption { margin: 10px 4px 0; color: #7b8b9d; font-size: 11px; text-align: right; }
+
+.brochure-preview__note {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 15px 32px 18px;
+  border-top: 1px solid #dfe7ef;
+  color: #5c6f83;
+  background: #fff;
+  font-size: 12px;
+}
+
+.brochure-preview__note b {
+  flex: 0 0 auto;
+  padding: 5px 9px;
+  border-radius: 999px;
+  color: #fff;
+  background: #e4762f;
+  font-size: 10px;
+}
+
+@media (max-width: 700px) {
+  .brochure-preview { width: calc(100% - 20px); margin: 10px auto; border-radius: 14px; }
+  .brochure-preview__header { align-items: flex-start; flex-direction: column; padding: 20px; }
+  .brochure-preview__map { padding: 10px; overflow-x: auto; }
+  .brochure-preview__map a { width: 920px; max-width: none; }
+  .brochure-preview__note { align-items: flex-start; padding: 14px 20px; }
+}
