@@ -74,22 +74,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   padding: 12px 16px;
   overflow: hidden;
   color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 6px 16px rgba(18, 48, 82, .14);
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(18, 48, 82, .16), inset 0 1px 0 rgba(255,255,255,.16);
   text-decoration: none;
   transition: transform .2s ease, box-shadow .2s ease;
 }
-.webguide-shortcut::before { content: ""; position: absolute; inset: 0; opacity: .22; background: radial-gradient(circle at 85% 15%, #fff 0, transparent 34%); pointer-events: none; }
+.webguide-shortcut::before { content: ""; position: absolute; inset: 0; opacity: .25; background: radial-gradient(circle at 88% 8%, #fff 0, transparent 35%); pointer-events: none; }
+.webguide-shortcut::after { content: ""; position: absolute; inset: auto 0 0; height: 3px; background: rgba(255,255,255,.42); pointer-events: none; }
 .webguide-shortcut:hover { color: #fff; transform: translateY(-3px); box-shadow: 0 15px 30px rgba(18, 48, 82, .24); }
-.webguide-shortcut--export { background: linear-gradient(135deg, #123d69, #176d98); }
-.webguide-shortcut--new { background: linear-gradient(135deg, #9d3f1f, #d26a27); }
+.webguide-shortcut--export { background: linear-gradient(135deg, #11466f 0%, #177aa2 100%); }
+.webguide-shortcut--new { background: linear-gradient(135deg, #a74320 0%, #df752c 100%); }
 .webguide-shortcut__icon { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; background: rgba(255,255,255,.12); }
 .webguide-shortcut__icon svg { width: 23px; height: 23px; fill: none; stroke: currentColor; stroke-width: 1.8; }
 .webguide-shortcut__copy { position: relative; display: block; }
 .webguide-shortcut__en { display: block; margin-bottom: 2px; color: rgba(255,255,255,.78); font: 700 .8rem/1.2 "Jost", sans-serif; letter-spacing: .13em; }
-.webguide-shortcut__catch { display: block; font-size: 1.4rem; font-weight: 800; line-height: 1.35; letter-spacing: .02em; }
-.webguide-shortcut__label { display: block; margin-top: 1px; font-size: 1rem; font-weight: 500; line-height: 1.4; opacity: .9; }
-.webguide-shortcut__arrow { position: relative; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; color: #17335c; background: #fff; font-size: 1.4rem; font-weight: 700; }
+.webguide-shortcut__catch { display: block; font-size: clamp(1.55rem, 2vw, 1.9rem); font-weight: 800; line-height: 1.25; letter-spacing: .04em; }
+.webguide-shortcut__label { display: block; margin-top: 3px; font-size: .95rem; font-weight: 600; line-height: 1.4; opacity: .9; }
+.webguide-shortcut__arrow { position: relative; display: grid; place-items: center; width: 32px; height: 32px; border: 1px solid rgba(255,255,255,.72); border-radius: 50%; color: #17335c; background: #fff; box-shadow: 0 3px 9px rgba(0,0,0,.12); font-size: 1.4rem; font-weight: 700; }
 @media (max-width: 767px) {
   .webguide-shortcuts { padding: 16px 15px 18px; }
   .webguide-shortcuts__heading { display: block; margin-bottom: 10px; }
@@ -99,12 +101,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .webguide-shortcut { grid-template-columns: 38px 1fr 28px; gap: 10px; min-height: 72px; padding: 10px 12px; }
   .webguide-shortcut__icon { width: 38px; height: 38px; }
   .webguide-shortcut__icon svg { width: 20px; height: 20px; }
-  .webguide-shortcut__catch { font-size: 1.25rem; }
+  .webguide-shortcut__catch { font-size: 1.35rem; }
   .webguide-shortcut__label { font-size: .95rem; }
   .webguide-shortcut__arrow { width: 28px; height: 28px; font-size: 1.25rem; }
 }
 </style>
-<link rel="stylesheet" href="./venue-guide.css?v=20261006-2">
+<link rel="stylesheet" href="./venue-guide.css?v=20261006-3">
 </head>
 <body class="index">
 <!-- Google Tag Manager (noscript) -->
@@ -532,53 +534,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <strong>目的から、出展者・製品を探す</strong>
     </h2>
     <div class="webguide-shortcuts__grid">
-      <a class="webguide-shortcut webguide-shortcut--export" href="https://velsion.jp/kyusyu-2026/web-guide?features%5B%5D=%E8%BC%B8%E5%87%BA%E5%8F%AF" target="_blank" rel="noopener">
-        <span class="webguide-shortcut__icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"></circle><path d="M6 24h36M24 6c5 5 8 11 8 18s-3 13-8 18c-5-5-8-11-8-18s3-13 8-18Z"></path></svg>
-        </span>
-        <span class="webguide-shortcut__copy">
-          <span class="webguide-shortcut__en">EXPORT READY</span>
-          <strong class="webguide-shortcut__catch">世界へ届ける商品を、ここから。</strong>
-          <span class="webguide-shortcut__label">輸出対応の出展者・製品を見る</span>
-        </span>
-        <span class="webguide-shortcut__arrow" aria-hidden="true">→</span>
-      </a>
       <a class="webguide-shortcut webguide-shortcut--new" href="https://velsion.jp/kyusyu-2026/web-guide?features%5B%5D=%E6%96%B0%E8%A3%BD%E5%93%81" target="_blank" rel="noopener">
         <span class="webguide-shortcut__icon" aria-hidden="true">
           <svg viewBox="0 0 48 48"><path d="M24 6 29 17l12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1 5-11Z"></path></svg>
         </span>
         <span class="webguide-shortcut__copy">
           <span class="webguide-shortcut__en">NEW PRODUCTS</span>
-          <strong class="webguide-shortcut__catch">次のヒット候補を、ひと足先に。</strong>
-          <span class="webguide-shortcut__label">注目の新製品を見る</span>
+          <strong class="webguide-shortcut__catch">新商品検索</strong>
+          <span class="webguide-shortcut__label">注目の新製品・新商品を探す</span>
         </span>
         <span class="webguide-shortcut__arrow" aria-hidden="true">→</span>
       </a>
-    </div>
-  </div>
-</section>
-
-<section class="venue-map-section venue-map-section--top" id="venue-map" aria-labelledby="venue-map-title">
-  <div class="venue-guide-inner">
-    <header class="venue-guide-heading">
-      <span class="venue-guide-heading__en">VENUE MAP</span>
-      <h2 id="venue-map-title">会場MAPを公開しました</h2>
-      <p>見たい展示や企画の位置を事前に確認して、限られた時間を効率よくご活用ください。</p>
-    </header>
-
-    <div class="venue-map-layout venue-map-layout--single">
-      <div class="venue-map-main">
-      <a class="venue-map-frame venue-map-frame--brochure" id="top-venue-map-frame" href="./assets/venue-map-brochure-v2.png" target="_blank" rel="noopener" aria-label="パンフレットデザインの会場MAPを大きく表示">
-        <img src="./assets/venue-map-brochure-v2.png" alt="マリンメッセ福岡B館のパンフレットデザイン会場MAP。AからLの出展ブロック、Aステージ・Bステージ、ペットツーリズムモデルルーム、VIP・海外バイヤー商談ラウンジ、九州ライブキッチンステージ、メイン入口を色分けして掲載" width="1536" height="1024">
-        <span class="venue-map-frame__zoom">＋ 大きく見る</span>
+      <a class="webguide-shortcut webguide-shortcut--export" href="https://velsion.jp/kyusyu-2026/web-guide?features%5B%5D=%E8%BC%B8%E5%87%BA%E5%8F%AF" target="_blank" rel="noopener">
+        <span class="webguide-shortcut__icon" aria-hidden="true">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"></circle><path d="M6 24h36M24 6c5 5 8 11 8 18s-3 13-8 18c-5-5-8-11-8-18s3-13 8-18Z"></path></svg>
+        </span>
+        <span class="webguide-shortcut__copy">
+          <span class="webguide-shortcut__en">EXPORT READY</span>
+          <strong class="webguide-shortcut__catch">輸出対応検索</strong>
+          <span class="webguide-shortcut__label">輸出対応の出展者・製品を探す</span>
+        </span>
+        <span class="webguide-shortcut__arrow" aria-hidden="true">→</span>
       </a>
-      </div>
-    </div>
-
-    <p class="venue-map-note">※会場MAPは2026年10月1日現在の内容です。変更となる場合があります。</p>
-    <div class="venue-map-actions">
-      <a class="venue-map-button" href="./assets/venue-map-brochure-v2.png" target="_blank" rel="noopener">会場MAPを大きく見る</a>
-      <a class="venue-map-button venue-map-button--outline" href="./visit.html#walk-guide">目的別・会場歩き方ガイド</a>
     </div>
   </div>
 </section>
@@ -2836,6 +2813,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <small>©Japan Management Association All Rights Reserved.</small>
     </div>
 </footer>
+<a class="floating-visitor-register" href="https://velsion.jp/kyusyu-2026/visitor/register/terms" target="_blank" rel="noopener">来場事前登録はこちら</a>
 <a href="#" id="page-top" class="to-top-button">
     <img src="https://ksh.jma.or.jp/images/common/top.svg" alt="ページの先頭へ">
 </a>
