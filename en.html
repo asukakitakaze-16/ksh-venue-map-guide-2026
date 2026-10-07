@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <!-- テスト環境でも本番サイトの画像・相対リンクを参照 -->
+    <base href="https://ksh.jma.or.jp/">
+<!-- Google Tag Manager --> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-KD7G38JB');</script> <!-- End Google Tag Manager --> 
+ <!-- End Google Tag Manager --> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 8th Kyushu/Okinawa Hospitality & Food Service Industry Exhibition</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>The 8th Kyushu/Okinawa Hospitality & Food Service Industry Exhibition 2026</title>
+    <meta name="description" content="Join the largest hospitality & food service business event in Kyushu & Okinawa, Japan. Discover innovative solutions, high-value regional products, and exclusive networking opportunities. Oct 28-29, 2026 at Marine Messe Fukuoka.">
+    <meta name="keywords" content="Kyushu Hospitality Expo, Food Service Industry, Asia Export Food Expo, Japan Trade Show, Fukuoka Event, Hotel Supplies, Restaurant Equipment, Japanese Food Export, B2B Exhibition">
+    <meta name="author" content="Japan Management Association (JMA)">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ksh.jma.or.jp/en.php">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ksh.jma.or.jp/en.php">
+    <meta property="og:title" content="The 8th Kyushu/Okinawa Hospitality & Food Service Industry Exhibition">
+    <meta property="og:description" content="The region's largest business event connecting international buyers with Japanese hospitality and food service leaders. Experience the future of food and hospitality in Fukuoka.">
+    <meta property="og:image" content="./images/en/jma_en_bg.webp">
+    <meta property="og:site_name" content="Hospitality & Food Week in Kyushu & Okinawa">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://ksh.jma.or.jp/en.php">
+    <meta name="twitter:title" content="Kyushu/Okinawa Hospitality & Food Service Expo 2026">
+    <meta name="twitter:description" content="Discover the future of food & hospitality in Japan. Join us on Oct 28-29, 2026 at Marine Messe Fukuoka.">
+    <meta name="twitter:image" content="./images/en/jma_en_bg.webp">
+
+
+    <!-- Fonts: ゴシック体 (Inter & Roboto) + 数字用 (Oswald) を採用 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Oswald:wght@500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config for Custom Colors/Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#184A9A',   // 指定色: Previous Highlights背景など
+                        'brand-orange': '#EA7022', // 指定色: アクセントカラー
+                        'brand-yellow': '#E5A33B', // 指定色: サブカラー
+                        'brand-dark': '#333333',   // 基本テキスト色
+                        'brand-gray': '#f3f4f6',   // 背景用薄いグレー
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'], // 基本フォント
+                        heading: ['Roboto', 'sans-serif'], // 見出し用（ゴシック系）
+                        oswald: ['Oswald', 'sans-serif'], // 数字用
+                    },
+                    backgroundImage: {
+                        // Modified: Responsive Hero Backgrounds
+                        'network-pattern': "url('https://www.transparenttextures.com/patterns/cubes.png')",
+                    },
+                    boxShadow: {
+                        'orange-glow': '0 4px 20px rgba(234, 112, 34, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        .logo {
+            height:1.8rem;
+        }
+
+        /* Custom Utilities */
+        .text-shadow {
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Animation Classes */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        
+        .reveal-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .faq-content a {
+            color:#184A9A;
+            text-decoration:underline;
+            font-weight: bold;
+        }
+
+        /* Infinite Scroll Animation */
+        @keyframes infinite-scroll {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); } /* Move half way (since we duplicated the items) */
+        }
+        
+        .animate-infinite-scroll {
+            display: flex;
+            width: max-content; /* Ensure container is wide enough */
+            animation: infinite-scroll 40s linear infinite;
+        }
+        
+        /* Pause on hover */
+        .animate-infinite-scroll:hover {
+            animation-play-state: paused;
+        }
+
+        /* Dual Banner Carousel: Row1 Left, Row2 Right */
+        @keyframes banner-scroll-left {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+        @keyframes banner-scroll-right {
+            from { transform: translateX(-50%); }
+            to   { transform: translateX(0); }
+        }
+
+        .banner-scroll-left {
+            animation: banner-scroll-left 70s linear infinite;
+        }
+        .banner-scroll-right {
+            animation: banner-scroll-right 60s linear infinite;
+        }
+
+        /* Pause on hover */
+        .banner-scroll-left:hover,
+        .banner-scroll-right:hover {
+            animation-play-state: paused;
+        }
+
+        /* Staggered delays */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Smooth Anchor Offset */
+        html {
+            scroll-padding-top: 90px;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #EA7022; 
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d6621a; 
+        }
+        .bg_or_bd {
+            color:#EA7022;
+        }
+    </style>
+        <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "uqb3ot92ph");
+</script>
+</head>
+<body class="font-sans text-brand-dark antialiased bg-white selection:bg-brand-orange selection:text-white">
+<!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KD7G38JB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Sticky Navigation (White Background) -->
+    <header id="navbar" class="fixed w-full z-50 bg-white shadow-md py-3 transition-all duration-300">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="en.php" class="block">
+                <img src="./images/en/logo.png" alt="Event Logo" class="logo w-auto object-contain">
+            </a>
+            
+            <div class="flex items-center gap-4">
+                <div class="flex bg-gray-100 rounded-full p-1 text-xs font-bold">
+                    <a href="index.php" class="px-3 py-1 rounded-full text-gray-500 hover:text-brand-dark">日本語</a>
+                    <span class="px-3 py-1 rounded-full bg-brand-dark text-white">English</span>
+                </div>
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex space-x-6 xl:space-x-8 items-center text-sm font-bold tracking-wide text-gray-600">
+                    <a href="en.php#home" class="hover:text-brand-orange transition-colors">TOP</a>
+                    <a href="en.php#about" class="hover:text-brand-orange transition-colors">About</a>
+                    <a href="en.php#categories" class="hover:text-brand-orange transition-colors">Categories</a>
+                    <a href="en.php#why-attend" class="hover:text-brand-orange transition-colors">Why Attend</a>
+                    <a href="en.php#results" class="hover:text-brand-orange transition-colors">Results</a>
+                    <a href="#about" class="hover:text-brand-orange transition-colors">Business Meetings</a>
+                    <a href="en_buyer.php" class="hover:text-brand-orange transition-colors">Hosted Buyer</a>
+                    <a href="https://velsion.jp/kyusyu-2026/en/visitor/register/terms" target="_blank" rel="noopener" class="bg-brand-orange text-white px-5 py-2.5 rounded hover:bg-white hover:text-brand-orange border-2 border-brand-orange transition-colors shadow-md">
+                        Pre-Register
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-2xl text-brand-blue focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center space-y-8 text-xl lg:hidden text-brand-dark font-bold">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-3xl text-brand-orange">
+                <i class="fas fa-times"></i>
+            </button>
+            <a href="en.php#home" class="mobile-link hover:text-brand-orange">TOP</a>
+            <a href="en.php#about" class="mobile-link hover:text-brand-orange">About</a>
+            <a href="en.php#categories" class="mobile-link hover:text-brand-orange">Categories</a>
+            <a href="en.php#why-attend" class="mobile-link hover:text-brand-orange">Why Attend</a>
+            <a href="en.php#results" class="mobile-link hover:text-brand-orange">Results</a>
+            <a href="en.php#about" class="mobile-link hover:text-brand-orange">Business Meetings</a>
+            <a href="en_buyer.php" class="mobile-link hover:text-brand-orange">Hosted Buyer</a>
+            <a href="https://velsion.jp/kyusyu-2026/en/visitor/register/terms" target="_blank" rel="noopener" class="mobile-link text-white bg-brand-orange px-10 py-4 rounded shadow-lg hover:bg-white hover:text-brand-orange border-2 border-brand-orange transition-colors">Pre-Register</a>
+        </div>
+    </header>
+
+    <!-- Floating visitor registration CTA -->
+    <a href="https://velsion.jp/kyusyu-2026/en/visitor/register/terms" target="_blank" rel="noopener" aria-label="Pre-register for the exhibition"
+       class="fixed bottom-5 right-5 z-50 flex items-center gap-2 bg-brand-orange text-white px-5 py-3 md:px-7 md:py-4 rounded-full shadow-2xl font-bold text-sm md:text-base hover:bg-brand-blue transition-colors border-2 border-white">
+        <i class="fas fa-ticket-alt" aria-hidden="true"></i>
+        <span>Pre-Register</span>
+    </a>
+
+    <!-- Hero Section -->
+    <!-- Modified: Classes updated for responsive background (bg-hero-mobile md:bg-hero-desktop) -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-hero-mobile md:bg-hero-desktop bg-cover bg-center bg-scroll md:bg-fixed bg-no-repeat overflow-hidden pt-16 pb-12">
+
+
+<!-- ▼【追加】背景画像エリア -->
+<div class="absolute inset-0 w-full h-full -z-10">
+        <!-- スマホ用画像 (md:hidden でPCでは隠す) -->
+        <img src="./images/en/jma_en_bg_sp.webp" alt="Hero Background Mobile" class="w-full h-full object-cover md:hidden">
+        
+        <!-- PC用画像 (hidden md:block でスマホでは隠す) -->
+        <img src="./images/en/jma_en_bg.webp" alt="Hero Background Desktop" class="w-full h-full object-cover hidden md:block">
+        
+        <!-- オーバーレイ（暗くするフィルターなど）もここに移動 -->
+        <div class="absolute inset-0 bg-gradient-to-b from-[#184A9A]/40 to-[#184A9A]/20"></div>
+        <div class="absolute inset-0 bg-black/30"></div>
+    </div>
+
+
+
+        
+        <div class="relative container mx-auto px-6 text-center text-white z-10 pt-6">
+            <div class="reveal-on-scroll bg-brand-blue/80 backdrop-blur-sm p-6 md:p-8 rounded-lg inline-block max-w-5xl mx-auto shadow-2xl border-t-4 border-brand-orange">
+                <p class="text-brand-yellow tracking-[0.2em] uppercase mb-4 font-bold text-xs md:text-sm">Experience the Future of Food & Hospitality</p>
+                
+                <!-- Event Titles Wrapper - Smaller & Compact -->
+                <div class="flex flex-col gap-2 mb-4">
+                    <h1 class="font-heading text-xl md:text-3xl lg:text-4xl font-extrabold leading-tight">
+                        The 8th Kyushu/Okinawa<br>
+                        Hospitality & Food Service<br>
+                        Industry Exhibition
+                    </h1>
+                    
+                    <!-- 連結アクセント - Compact -->
+                    <div class="text-brand-orange font-bold text-lg flex items-center justify-center gap-4 py-1">
+                        <span class="h-px w-8 bg-white/30"></span>
+                        <span>&</span>
+                        <span class="h-px w-8 bg-white/30"></span>
+                    </div>
+
+                    <h1 class="font-heading text-xl md:text-3xl lg:text-4xl font-extrabold leading-tight text-white">
+                        The 2nd Asia Export Food Exhibition
+                    </h1>
+                </div>
+                
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-sm md:text-base font-bold">
+                    <div class="flex items-center gap-2 bg-white/10 px-5 py-1.5 rounded-full">
+                        <i class="far fa-calendar-alt text-brand-orange"></i>
+                        <span>October 28–29, 2026</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white/10 px-5 py-1.5 rounded-full">
+                        <i class="fas fa-map-marker-alt text-brand-orange"></i>
+                        <span>Marine Messe Fukuoka</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator - Adjusted Position -->
+        <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-white animate-pulse flex flex-col items-center gap-1 opacity-60">
+            <span class="text-[10px] font-bold tracking-widest uppercase">Scroll</span>
+            <i class="fas fa-chevron-down text-brand-orange text-sm"></i>
+        </div>
+    </section>
+
+    <!-- Main Content Wrapper -->
+    <main>
+
+                <!-- Bottom Content: Key Buyer Companies Logos (Dual Infinite Scroll) -->
+                <div class="reveal-on-scroll overflow-hidden" style="margin:4em 0;">
+                    <!-- Banner Carousel: Hosted Buyer Companies -->
+<div class="banner_carousel banner-carousel-wrap">
+
+    <div class="text-center mb-10">
+        <h4 class="font-heading text-2xl font-bold text-brand-dark inline-block border-b-2 border-brand-orange pb-2">Hosted Buyer Companies</h4>
+    </div>
+
+    <!-- Carousel Wrapper: fade edges -->
+    <div class="w-full relative" style="mask-image:linear-gradient(to right,transparent 0%,black 6%,black 94%,transparent 100%);-webkit-mask-image:linear-gradient(to right,transparent 0%,black 6%,black 94%,transparent 100%);">
+
+        <!-- Row 1: Left scroll -->
+        <div class="overflow-hidden mb-4">
+            <div class="banner-scroll-left flex gap-6 py-3" style="width:max-content;">
+                <div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_1.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_3.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_5.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_7.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_8.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_9.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_10.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_11.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_12.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_13.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_14.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_21.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_22.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_23.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_24.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_1.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_2.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_3.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_4.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_5.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_6.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_7.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_8.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_1.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_3.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_5.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_7.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_8.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_9.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_10.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_11.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_12.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_13.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_14.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_21.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_22.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_23.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_24.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_1.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_2.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_3.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_4.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_5.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_6.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_7.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_8.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div>            </div>
+        </div>
+
+        <!-- Row 2: Right scroll -->
+        <div class="overflow-hidden mb-4">
+            <div class="banner-scroll-right flex gap-6 py-3" style="width:max-content;">
+                <div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_27.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_28.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_29.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_30.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_31.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_32.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_33.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_38.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_40.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_41.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_42.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_44.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_48.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_49.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_51.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_9.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_10.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_11.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_12.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_13.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_14.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_15.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_16.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_27.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_28.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_29.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_30.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_31.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_32.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_33.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_38.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_40.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_41.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_42.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_44.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_48.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_49.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_51.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_9.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_10.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_11.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_12.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_13.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_14.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_15.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_16.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div>            </div>
+        </div>
+
+        <!-- Row 3: Left scroll (alt speed) -->
+        <div class="overflow-hidden">
+            <div class="banner-scroll-left banner-scroll-left--alt flex gap-6 py-3" style="width:max-content;">
+                <div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_52.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_53.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_54.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_56.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_58.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_61.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_63.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_64.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_66.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_67.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_68.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_70.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_74.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_76.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_78.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_17.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_18.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_19.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_20.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_21.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_22.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_23.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_24.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_52.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_53.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_54.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_56.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_58.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_61.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_63.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_64.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_66.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_67.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_68.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_70.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_74.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_76.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_no_78.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_17.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_18.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_19.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_20.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_21.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_22.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_23.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div><div class="w-44 h-24 bg-white rounded-lg shadow-sm flex items-center justify-center p-3 flex-shrink-0"><img src="./images/banners/banner_new_24.webp" alt="Key Buyer" class="max-w-full max-h-full object-contain" loading="lazy"></div>            </div>
+        </div>
+
+    </div>
+
+</div>
+                </div>
+
+        <!-- CTA Section (Moved from Hero & Dual Cards) -->
+        <section class="bg-brand-blue py-16 border-t-4 border-brand-orange relative z-20">
+            <!-- Decorative bg -->
+            <div class="absolute inset-0 bg-network-pattern opacity-10 pointer-events-none"></div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <!-- Dual Cards Container -->
+                <div class="grid md:grid-cols-2 gap-8 w-full max-w-5xl mx-auto">
+                    
+                    <!-- Card 1: Visitor Info -->
+                    <div class="bg-white p-8 rounded-lg text-center shadow-2xl flex flex-col items-center justify-between hover:-translate-y-1 transition-transform duration-300">
+                        <div>
+                            <h3 class="text-brand-orange font-bold uppercase tracking-widest text-xs mb-3">For Visitors Considering Attending</h3>
+                            <p class="text-lg md:text-xl font-bold mb-4 text-brand-blue">Visitor pre-registration is <span class="text-brand-orange">now open</span>.</p>
+                            <p class="text-sm text-gray-600 mb-6 leading-relaxed font-medium">
+                                Discover a curated showcase of high-value products attracting buyers from Japan and abroad. This business-driven event provides direct access to new sourcing opportunities and potential partnerships.
+                            </p>
+                        </div>
+                        
+                        <a href="https://velsion.jp/kyusyu-2026/en/visitor/register/terms" target="_blank" rel="noopener" class="w-full sm:w-auto inline-block bg-brand-orange text-white px-8 py-3 rounded font-bold text-base hover:bg-white hover:text-brand-orange transition-all duration-300 shadow-lg border-2 border-brand-orange">
+                            Visitor registration form
+                        </a>
+                    </div>
+
+                    <!-- Card 2: Business Meeting Program -->
+                    <div class="bg-white p-8 rounded-lg text-center shadow-2xl flex flex-col items-center justify-between hover:-translate-y-1 transition-transform duration-300">
+                        <div>
+                            <h3 class="text-brand-blue font-bold uppercase tracking-widest text-xs mb-3">Pre-Scheduled Business Meeting Program</h3>
+                            <p class="text-lg md:text-xl font-bold mb-4 text-brand-blue">Exclusive Business Matching</p>
+                            <p class="text-sm text-gray-600 mb-6 leading-relaxed font-medium">
+                                This program connects international buyers with Japanese exhibitors offering high-quality products, maximizing business opportunities through both exhibition and structured one-to-one meetings.
+                            </p>
+                        </div>
+                        
+                        <!-- Active Button -->
+                        <a href="#hosted-buyer" class="w-full sm:w-auto inline-block bg-brand-orange text-white px-8 py-3 rounded font-bold text-base hover:bg-white hover:text-brand-orange transition-all duration-300 shadow-lg border-2 border-brand-orange">
+                            Program Details
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-28 bg-white relative overflow-hidden">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col lg:flex-row items-center gap-20">
+                    <!-- Image Grid -->
+                    <div class="w-full lg:w-1/2 grid grid-cols-2 gap-4 reveal-on-scroll relative">
+                        <!-- Decorative bg -->
+                        <div class="absolute -top-10 -left-10 w-full h-full bg-brand-gray rounded-3xl -z-10"></div>
+                        
+                        <img src="./images/index/merit1.jpg" alt="Japanese Hospitality" class="w-full h-64 object-cover rounded shadow-lg border-b-4 border-brand-orange">
+                        <img src="./images/exhibit/foodservice/k_merit05.jpg" alt="Gourmet Food" class="w-full h-64 object-cover rounded shadow-lg mt-8 border-b-4 border-brand-yellow">
+                        <img src="./images/exhibit/foodservice/k_merit04.jpg" alt="Business Meeting" class="w-full h-64 object-cover rounded shadow-lg border-b-4 border-brand-blue">
+                        <img src="./images/exhibit/asia/merit05.jpg" alt="Kyushu Ingredients" class="w-full h-64 object-cover rounded shadow-lg mt-8 border-b-4 border-brand-orange">
+                    </div>
+
+                    <!-- Text Content (Updated) -->
+                    <div class="w-full lg:w-1/2 reveal-on-scroll delay-200">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-12 h-1 bg-brand-orange"></span>
+                            <span class="text-brand-orange font-bold tracking-widest uppercase text-sm">About The Event</span>
+                        </div>
+                        
+                        <h2 class="font-heading text-2xl lg:text-3xl font-extrabold text-brand-dark mb-6 leading-tight">
+                            About the Kyushu–Okinawa<br>
+                            Hospitality & Food Service Industry Expo &<br>
+                            <span class="text-brand-blue">Asia Export Food Expo</span>
+                        </h2>
+                        
+                        <p class="text-base text-gray-600 mb-8 leading-relaxed font-medium">
+                            Hospitality & Food Week in Kyushu–Okinawa is the region’s largest business event, featuring two exhibitions:
+                        </p>
+
+                        <div class="space-y-6 mb-8">
+                            <div class="flex gap-4 items-start p-4 rounded-lg bg-gray-50 border-l-4 border-brand-blue hover:bg-blue-50 transition-colors duration-300">
+                                <i class="fas fa-hotel text-brand-blue text-xl mt-1"></i>
+                                <div>
+                                    <h3 class="font-bold text-lg text-brand-blue mb-1">The Kyushu–Okinawa Hospitality & Food Service Industry Expo</h3>
+                                    <p class="text-sm text-gray-600">Showcasing the latest solutions for the accommodation and food service sectors.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 items-start p-4 rounded-lg bg-gray-50 border-l-4 border-brand-yellow hover:bg-yellow-50 transition-colors duration-300">
+                                <i class="fas fa-globe-asia text-brand-yellow text-xl mt-1" style="color: #d48c21;"></i>
+                                <div>
+                                    <h3 class="font-bold text-lg text-brand-yellow mb-1" style="color: #d48c21;">The Asia Export Food Expo</h3>
+                                    <p class="text-sm text-gray-600">Supporting the global expansion of exceptional regional food products.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-sm text-gray-600 space-y-4 mb-8">
+                            <p class="leading-relaxed">
+                                Organized by the <span class="font-bold text-brand-dark">Japan Management Association (JMA)</span>—well-known for FOODEX JAPAN and HCJ—the event leverages decades of expertise to drive regional economic growth and meet strong demand for overseas market development.
+                            </p>
+                            <p class="leading-relaxed font-bold text-brand-blue">
+                                The exhibition will be held on October 28–29, 2026 at Marine Messe Fukuoka, with approximately 200 exhibitors and 6,000 visitors expected.
+                            </p>
+                            <p class="leading-relaxed">
+                                Join us for a prime opportunity to expand your business from the region to the global market.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW Categories Section (Based on Uploaded Image) -->
+        <section id="categories" class="py-24 text-white bg-brand-blue"> <!-- Modified: Background to #184A9A (brand-blue) -->
+            <div class="container mx-auto px-6">
+                
+                <!-- Expo 1 -->
+                <div class="mb-20 reveal-on-scroll">
+                    <!-- Title resized: text-2xl md:text-3xl -->
+                    <h2 class="text-center font-heading text-2xl md:text-3xl font-bold mb-3">The 8th Kyushu–Okinawa<br>Hospitality & Food Service Industry Expo</h2>
+                    
+                    <!-- Subtitle updated: Larger, Bold, Yellow (#E5A33B) -->
+                    <p class="text-center text-lg md:text-xl mb-12 font-bold text-brand-yellow">Examples of Participating Businesses and Sectors</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-10 md:gap-6 lg:gap-10 text-center">
+                        
+                        <!-- Col 1 -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-6">
+                                <img src="./images/en/icon1.png" alt="Accommodation Industry" class="h-24 w-auto inline-block object-contain">
+                            </div>
+                            <!-- Modified: Subtitle layout fixed -->
+                            <h3 class="font-bold text-lg mb-4 text-center min-h-[5rem] flex flex-col justify-center">
+                                Accommodation Industry
+                                <span class="block text-sm font-normal opacity-80 mt-1 leading-tight">(Hotels, ryokans, and other lodging facilities)</span>
+                            </h3>
+                            <ul class="text-sm space-y-2 opacity-90 text-left md:text-center w-full pl-4 md:pl-0 list-disc list-inside md:list-none">
+                                <li>Owners / General Managers</li>
+                                <li>Purchasing & Facilities Management</li>
+                                <li>Digital Transformation (DX) & IT Management</li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 2 -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-6">
+                                <img src="./images/en/icon2.png" alt="Food Service Industry" class="h-24 w-auto inline-block object-contain">
+                            </div>
+                            <!-- Modified: Subtitle layout fixed -->
+                            <h3 class="font-bold text-lg mb-4 text-center min-h-[5rem] flex flex-col justify-center">
+                                Food Service Industry
+                                <span class="block text-sm font-normal opacity-80 mt-1 leading-tight">(Restaurants, cafés, izakayas)</span>
+                            </h3>
+                            <ul class="text-sm space-y-2 opacity-90 text-left md:text-center w-full pl-4 md:pl-0 list-disc list-inside md:list-none">
+                                <li>Owners / Store Managers</li>
+                                <li>Head Chefs</li>
+                                <li>Purchasing Managers</li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 3 -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-6">
+                                <img src="./images/en/icon3.png" alt="Other Related Businesses" class="h-24 w-auto inline-block object-contain">
+                            </div>
+                            <!-- Modified: Height alignment -->
+                            <h3 class="font-bold text-lg mb-4 text-center min-h-[5rem] flex flex-col justify-center">
+                                Other Related Businesses
+                            </h3>
+                            <ul class="text-sm space-y-2 opacity-90 text-left md:text-center w-full pl-4 md:pl-0 list-disc list-inside md:list-none">
+                                <li>Store & facility design / construction firms</li>
+                                <li>Consulting firms</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="w-full h-px bg-brand-orange mb-20 opacity-50 reveal-on-scroll"></div>
+
+                <!-- Expo 2 -->
+                <div class="reveal-on-scroll">
+                    <!-- Title resized: text-2xl md:text-3xl -->
+                    <h2 class="text-center font-heading text-2xl md:text-3xl font-bold mb-3">The 2nd Asia Export Food Expo</h2>
+                    
+                    <!-- Subtitle updated: Larger, Bold, Yellow (#E5A33B) -->
+                    <p class="text-center text-lg md:text-xl mb-12 font-bold text-brand-yellow">Examples of Participating Businesses and Sectors</p>
+                    
+                    <div class="grid md:grid-cols-3 gap-10 md:gap-6 lg:gap-10 text-center">
+                        
+                        <!-- Col 1 -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-6">
+                                <img src="./images/en/icon4.png" alt="Food & Beverage Manufacturers" class="h-24 w-auto inline-block object-contain">
+                            </div>
+                            <h3 class="font-bold text-lg mb-4 text-center min-h-[4rem] flex flex-col justify-center">
+                                Food & Beverage<br>Manufacturers / Producers
+                            </h3>
+                            <ul class="text-sm space-y-2 opacity-90 text-left md:text-center w-full pl-4 md:pl-0 list-disc list-inside md:list-none">
+                                <li>Management</li>
+                                <li>Overseas Business Teams</li>
+                                <li>Product Development Teams</li>
+                                <li>Producer Cooperatives</li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 2 -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-6">
+                                <img src="./images/en/icon5.png" alt="Equipment & Service Providers" class="h-24 w-auto inline-block object-contain">
+                            </div>
+                            <h3 class="font-bold text-lg mb-4 text-center min-h-[4rem] flex flex-col justify-center">
+                                Equipment & Service Providers
+                            </h3>
+                            <ul class="text-sm space-y-2 opacity-90 text-left md:text-center w-full pl-4 md:pl-0 list-disc list-inside md:list-none">
+                                <li>Packaging Machinery</li>
+                                <li>Freezing & Freshness Preservation Technologies</li>
+                                <li>Logistics / Forwarders</li>
+                                <li>Export Consulting Firms</li>
+                                <li>Certification & Compliance Support Services</li>
+                            </ul>
+                        </div>
+
+                        <!-- Col 3 -->
+                        <div class="flex flex-col items-center">
+                            <div class="mb-6">
+                                <img src="./images/en/icon6.png" alt="Local Governments / Industry Associations" class="h-24 w-auto inline-block object-contain">
+                            </div>
+                            <h3 class="font-bold text-lg mb-4 text-center min-h-[4rem] flex flex-col justify-center">
+                                Local Governments /<br>Industry Associations
+                            </h3>
+                            <ul class="text-sm space-y-2 opacity-90 text-left md:text-center w-full pl-4 md:pl-0 list-disc list-inside md:list-none">
+                                <li>Representatives overseeing regional specialty products</li>
+                                <li>Teams supporting overseas market development</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Why Attend Section (New) -->
+        <section id="why-attend" class="py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-4xl mx-auto mb-16 reveal-on-scroll">
+                    <span class="text-brand-orange font-bold tracking-widest uppercase text-sm">Benefits</span>
+                    <h2 class="font-heading text-4xl font-extrabold text-brand-dark mt-2 mb-6">Why Attend</h2>
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Hospitality & Food Week in Kyushu–Okinawa provides practical insights and solutions that directly address the challenges facing the region’s hospitality and food service industries.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-10">
+                    <!-- Item 1 -->
+                    <div class="reveal-on-scroll flex flex-col items-center text-center p-6 rounded-xl hover:bg-gray-50 transition-colors duration-300">
+                        <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mb-6 text-brand-blue shadow-sm">
+                            <i class="fas fa-tasks text-3xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-brand-dark mb-4">Compare industry<br>solutions efficiently</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Explore the latest equipment, systems, and services designed to tackle urgent issues such as labor shortages, productivity improvement, and inbound tourism— all in one place.
+                        </p>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="reveal-on-scroll delay-100 flex flex-col items-center text-center p-6 rounded-xl hover:bg-gray-50 transition-colors duration-300">
+                        <div class="w-20 h-20 bg-orange-50 rounded-full flex items-center justify-center mb-6 text-brand-orange shadow-sm">
+                            <i class="fas fa-search-dollar text-3xl"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-brand-dark mb-4">Discover unique<br>regional specialties</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Find high-value ingredients, beverages, and artisanal products unique to Kyushu and Okinawa, and connect directly with producers and suppliers for differentiated sourcing.
+                        </p>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="reveal-on-scroll delay-200 flex flex-col items-center text-center p-6 rounded-xl hover:bg-gray-50 transition-colors duration-300">
+                        <div class="w-20 h-20 bg-yellow-50 rounded-full flex items-center justify-center mb-6 text-brand-yellow shadow-sm">
+                            <i class="fas fa-lightbulb text-3xl" style="color: #d48c21;"></i>
+                        </div>
+                        <h3 class="font-bold text-xl text-brand-dark mb-4">Gain actionable insights<br>through expert seminars</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Learn market trends, success stories, and proven management strategies from industry leaders in organizer-led seminars and exhibitor presentations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-16 reveal-on-scroll">
+                    <p class="text-xl font-bold text-brand-blue">
+                        Discover the partners and ideas that can move your business forward.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Visitor Information Section (New based on uploaded image) -->
+        <section id="visitor-info-detail" class="py-24 bg-brand-gray border-t border-gray-200">
+            <div class="container mx-auto px-6 max-w-5xl">
+                
+                <div class="text-center mb-12 reveal-on-scroll">
+                    <h2 class="font-heading text-3xl md:text-4xl font-extrabold text-brand-dark mb-4">Visitor Information</h2>
+                    <div class="w-16 h-1 bg-brand-orange mx-auto rounded-full"></div>
+                </div>
+
+                <!-- Unified Outline & Registration Card -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 reveal-on-scroll">
+                    
+                    <!-- Outline Header -->
+                    <div class="bg-brand-blue py-4 px-6 border-b-4 border-brand-orange">
+                        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                            <i class="fas fa-info-circle text-brand-orange"></i> Outline
+                        </h3>
+                    </div>
+                    
+                    <!-- Outline Content (Date & Venue) -->
+                    <div class="p-8 grid md:grid-cols-2 gap-8">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0 text-brand-blue">
+                                <i class="far fa-clock text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-500 text-sm uppercase tracking-wide mb-1">Date & Time</h4>
+                                <p class="text-lg font-bold text-brand-dark">October 28 (Wed) – 29 (Thu), 2026</p>
+                                <p class="text-gray-600">10:00 - 17:00 <span class="text-xs text-gray-400">(Last day until 16:30)</span></p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center flex-shrink-0 text-brand-blue">
+                                <i class="fas fa-map-marker-alt text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-500 text-sm uppercase tracking-wide mb-1">Venue</h4>
+                                <p class="text-lg font-bold text-brand-dark">Marine Messe Fukuoka</p>
+                                <a href="https://www.marinemesse.or.jp/eng/messe-b/access/" target="_blank" class="text-brand-orange text-sm hover:underline font-medium">View Access Map <i class="fas fa-external-link-alt ml-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Registration Header (Inside Outline Box) -->
+                    <div class="bg-brand-orange py-3 px-6">
+                        <h3 class="text-lg font-bold text-white text-center">Advance visitor registration <span class="text-sm font-normal text-white/90 ml-2">(Badge issued for admission)</span></h3>
+                    </div>
+                    
+                    <!-- Registration Content (Buttons) -->
+                    <div class="p-10 bg-gray-50 flex flex-col md:flex-row gap-10 items-center justify-center">
+                        
+                        <!-- Pre-register Button -->
+                        <div class="flex flex-col items-center w-full md:w-1/2">
+                            <a href="https://velsion.jp/kyusyu-2026/en/visitor/register/terms" target="_blank" rel="noopener" class="w-full bg-brand-orange text-white font-bold py-5 px-6 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 relative overflow-hidden group text-center">
+                                <span class="relative z-10 text-lg">Pre-register for visits here</span>
+                                <div class="absolute inset-0 bg-white/20 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
+                            </a>
+                            <p class="text-xs text-brand-orange mt-3 font-bold bg-white px-3 py-1 rounded-full border border-orange-100">
+                                <i class="fas fa-check-circle mr-1"></i> Visitor registration is now open
+                            </p>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="hidden md:block w-px h-24 bg-gray-300"></div>
+                        <div class="md:hidden w-full h-px bg-gray-300"></div>
+
+                        <!-- My Page Button -->
+                        <div class="flex flex-col items-center w-full md:w-1/2">
+                            
+                            <button disabled class="w-full bg-gray-500 text-white font-bold py-5 px-6 rounded-lg shadow-md hover:bg-gray-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                                <i class="fas fa-user-circle mr-2"></i> Click here for My Page
+                            </button>
+                            <p class="text-xs text-brand-orange mt-3 font-bold bg-white px-3 py-1 rounded-full border text-gray-500">
+                                 (If you have pre-registered for the visit)
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Target Visitors Card (New) -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 reveal-on-scroll">
+                    <div class="bg-brand-blue py-4 px-6 border-b-4 border-brand-orange">
+                        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                            <i class="fas fa-users text-brand-orange"></i> Target
+                        </h3>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-gray-600 mb-8 leading-relaxed font-medium">
+                            In addition to domestic visitors, mainly from the Kyushu and Okinawa areas, international visitors, mainly from East Asia, will also be mobilised to visit the exhibition. Visitors will come from various industries related to the tourism industry.<br>
+                            Visitors are mainly from <span class="font-bold text-brand-orange">accommodation (hotels and inns), food service, trading companies, manufacturers and developers</span>.
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm font-bold text-center text-brand-dark">
+                            <!-- Column 1 -->
+                            <div class="space-y-4">
+                                <div class="bg-orange-50 border border-orange-100 py-3 px-4 rounded hover:bg-orange-100 transition-colors bg_or_bd">Accommodation</div>
+                                <div class="bg-orange-50 border border-orange-100 py-3 px-4 rounded hover:bg-orange-100 transition-colors bg_or_bd">Manufacturer</div>
+                                <div class="bg-orange-50 border border-orange-100 py-3 px-4 rounded hover:bg-orange-100 transition-colors">Traffic and transport</div>
+                                <div class="bg-orange-50 border border-orange-100 py-3 px-4 rounded hover:bg-orange-100 transition-colors">Agriculture, forestry and fisheries</div>
+                                <div class="bg-orange-50 border border-orange-100 py-3 px-4 rounded hover:bg-orange-100 transition-colors">Publishing and media</div>
+                            </div>
+                            
+                            <!-- Column 2 -->
+                            <div class="space-y-4">
+                                <div class="bg-orange-50 border border-orange-100 py-3 px-4 rounded hover:bg-orange-100 transition-colors bg_or_bd">Food service and mid-market food</div>
+                                <div class="bg-orange-50 border border-orange-100 py-3 px-4 rounded hover:bg-orange-100 transition-colors bg_or_bd">Developer, construction and design</div>
+                                <div class="bg-orange-50 border border-orange-100 py-3 px-4 rounded hover:bg-orange-100 transition-colors">Travel and leisure</div>
+                                <div class="bg-orange-50 border border-orange-100 py-3 px-4 rounded hover:bg-orange-100 transition-colors">Retail</div>
+                                <div class="bg-orange-50 border border-orange-100 py-3 px-4 rounded hover:bg-orange-100 transition-colors">Industry associations/others</div>
+                            </div>
+
+                            <!-- Column 3 -->
+                            <div class="space-y-4">
+                                <div class="bg-orange-50 border border-orange-100 py-3 px-4 rounded hover:bg-orange-100 transition-colors bg_or_bd">Trading company</div>
+                                <div class="bg-orange-50 border border-orange-100 py-3 px-4 rounded hover:bg-orange-100 transition-colors">Municipality</div>
+                                <div class="bg-orange-50 border border-orange-100 py-3 px-4 rounded hover:bg-orange-100 transition-colors">IT and telecommunications</div>
+                                <div class="bg-orange-50 border border-orange-100 py-3 px-4 rounded hover:bg-orange-100 transition-colors">Marketing consulting</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Stats / Previous Results (Reconstructed with Video) -->
+        <section id="results" class="py-24 bg-brand-blue text-white bg-network-pattern bg-fixed relative">
+             <!-- Overlay to ensure readability on pattern -->
+             <div class="absolute inset-0 bg-brand-blue/90"></div>
+             
+             <div class="container mx-auto px-6 relative z-10">
+                 <!-- Section Title -->
+                 <div class="text-center mb-16 reveal-on-scroll">
+                     <h2 class="font-heading text-4xl font-bold mb-3">Previous Result</h2>
+                     <div class="w-24 h-1 bg-brand-orange mx-auto"></div>
+                     <p class="text-brand-yellow mt-4 font-bold tracking-wider uppercase">Proven Track Record</p>
+                 </div>
+
+   
+                 <!-- <div class="max-w-4xl mx-auto mb-20 reveal-on-scroll">
+                     <div class="text-center mb-6">
+                         <h3 class="font-heading text-2xl md:text-3xl font-bold text-white mb-2">Scenes from the Previous Edition</h3>
+                         <p class="text-blue-200 text-sm">Highlights from the bustling exhibition floor</p>
+                     </div>
+                     
+                  
+                     <div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden shadow-2xl border border-white/20 group cursor-pointer">
+
+                         <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070&auto=format&fit=crop" alt="Exhibition Scene" class="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-300">
+                         
+                      
+                         <div class="absolute inset-0 flex items-center justify-center">
+                             <div class="w-20 h-20 bg-brand-orange/90 rounded-full flex items-center justify-center pl-2 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                 <i class="fas fa-play text-3xl text-white"></i>
+                             </div>
+                         </div>
+                    
+                     </div>
+                 </div> -->
+
+                 <!-- Stats Grid -->
+                 <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 text-center">
+                     <!-- Card 1: White background, Blue text -->
+                     <div class="reveal-on-scroll delay-100 p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                         <!-- Font: Oswald, Size: Adjusted responsive sizes, Color: Blue -->
+                         <div class="text-4xl sm:text-5xl lg:text-6xl font-oswald font-bold text-brand-blue mb-2 counter" data-target="3683">0</div>
+                         <div class="text-xs sm:text-sm md:text-base font-bold text-brand-orange uppercase tracking-wider">Total Visitors</div>
+                     </div>
+                     
+                     <!-- Card 2 -->
+                     <div class="reveal-on-scroll delay-200 p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                         <div class="text-4xl sm:text-5xl lg:text-6xl font-oswald font-bold text-brand-blue mb-2 counter" data-target="173">0</div>
+                         <div class="text-xs sm:text-sm md:text-base font-bold text-brand-orange uppercase tracking-wider">Exhibitors</div>
+                     </div>
+                     
+                     <!-- Card 3 -->
+                     <div class="reveal-on-scroll delay-300 p-6 bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
+                         <div class="text-4xl sm:text-5xl lg:text-6xl font-oswald font-bold text-brand-blue mb-2 counter" data-target="214">0</div>
+                         <div class="text-xs sm:text-sm md:text-base font-bold text-brand-orange uppercase tracking-wider">Booths</div>
+                     </div>
+                     
+                 </div>
+                 
+                 <p class="text-xs text-center text-blue-200 mt-16 max-w-2xl mx-auto bg-black/20 py-4 px-8 rounded-full">
+                     *Figures represent the total number of visitor registrations for 2 exhibitions.
+                 </p>
+             </div>
+        </section>
+
+        <!-- CTA Section - Visitor (Bottom) - Updated to reflect disabled state -->
+        <!-- <section id="register" class="py-24 bg-brand-dark text-white relative overflow-hidden">
+
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+            
+            <div class="container mx-auto px-6 relative z-10 max-w-4xl text-center">
+                <div class="reveal-on-scroll">
+                    <span class="inline-block py-1 px-4 border border-brand-orange text-brand-orange font-bold text-xs tracking-widest uppercase mb-6 rounded-full">For Visitors</span>
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">Ready to expand your business?</h2>
+                    
+                    <p class="text-xl mb-4 font-bold">Visitor pre-registration is scheduled to open in <span class="text-brand-orange text-2xl">mid-April 2026</span>.</p>
+                    <p class="text-gray-400 mb-12 max-w-2xl mx-auto">
+                        Experience a curated showcase of high-value products attracting strong attention from both domestic and international markets.
+                    </p>
+
+                    <div class="bg-white p-10 rounded-xl shadow-2xl">
+                        <h3 class="text-lg font-bold mb-6 text-brand-dark">Get Notified When Registration Opens</h3>
+                        <form class="flex flex-col md:flex-row gap-4 justify-center">
+                            <input type="email" placeholder="Enter your email address" class="px-5 py-4 rounded bg-gray-100 border border-gray-300 text-brand-dark w-full md:w-96 focus:outline-none focus:ring-2 focus:ring-brand-orange font-medium">
+                            <button type="submit" class="bg-brand-orange text-white font-bold px-10 py-4 rounded hover:bg-brand-blue transition-colors shadow-lg whitespace-nowrap">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Hosted Buyer Program -->
+        <section id="hosted-buyer" class="py-28 bg-gradient-to-r from-white to-blue-50">
+            <div class="container mx-auto px-6">
+                <!-- Top Content: Image & Text -->
+                <div class="flex flex-col lg:flex-row gap-16 items-center mb-20">
+                    <div class="lg:w-1/2 reveal-on-scroll">
+                        <div class="relative">
+                            <div class="absolute -inset-4 bg-brand-yellow opacity-30 rounded-lg blur-lg"></div>
+                            <img src="./images/en/meet.webp" alt="Business Meeting" class="relative rounded-lg shadow-2xl w-full border-4 border-white">
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2 reveal-on-scroll delay-100">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="h-1 w-10 bg-brand-orange rounded-full"></span>
+                            <span class="text-brand-orange font-bold uppercase tracking-widest text-sm">VIP Access</span>
+                        </div>
+                        <h2 class="font-heading text-4xl font-extrabold text-brand-blue mb-4">Pre-Scheduled Business<br>Meeting Program</h2>
+                        
+                        <h3 class="text-xl font-bold text-brand-yellow mb-6">Maximize your results through both exhibition and business meetings</h3>
+                        
+                        <p class="text-gray-600 mb-6 leading-relaxed text-base">
+                            The organizer invites key buyers from Japan—particularly those in the Kyushu hospitality and food service sectors—and from overseas, including importers and retailers mainly across Asia.
+                        </p>
+                        <p class="text-gray-600 mb-8 leading-relaxed text-base">
+                            Exhibitors and buyers are matched in advance, ensuring confirmed business meetings take place during the event.
+                            This effective program supports not only global market expansion but also new business development within the Kyushu region.
+                        </p>
+
+                        <!-- <a href="#" target="_blank" class="inline-flex items-center gap-3 bg-brand-blue text-white px-10 py-4 rounded hover:bg-brand-orange transition-all duration-300 font-bold shadow-lg transform hover:-translate-y-1">
+                            Program Details
+                            <i class="fas fa-external-link-alt"></i>
+                        </a> -->
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-28 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-16 reveal-on-scroll">
+                    <h2 class="font-heading text-4xl font-extrabold text-brand-dark">FAQ</h2>
+                    <div class="w-16 h-1.5 bg-brand-orange mx-auto mt-5 rounded-full"></div>
+                </div>
+
+                <div class="space-y-6 reveal-on-scroll">
+                    <!-- FAQ Item 1 -->
+                    <div class="border-2 border-gray-100 rounded-lg overflow-hidden hover:border-brand-yellow transition-colors">
+                        <button class="faq-btn w-full px-8 py-5 text-left bg-white hover:bg-gray-50 flex justify-between items-center font-bold text-brand-dark focus:outline-none text-lg">
+                            <span>Q. How can I visit?</span>
+                            <span class="w-8 h-8 flex items-center justify-center rounded-full bg-brand-gray text-brand-orange">
+                                <i class="fas fa-plus transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="faq-content h-0 overflow-hidden transition-all duration-300">
+                            <div class="p-8 text-gray-600 border-t border-gray-100 bg-gray-50">
+                                Pre-registration for visits is required.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="border-2 border-gray-100 rounded-lg overflow-hidden hover:border-brand-yellow transition-colors">
+                        <button class="faq-btn w-full px-8 py-5 text-left bg-white hover:bg-gray-50 flex justify-between items-center font-bold text-brand-dark focus:outline-none text-lg">
+                            <span>Q. Is there an entrance fee?</span>
+                            <span class="w-8 h-8 flex items-center justify-center rounded-full bg-brand-gray text-brand-orange">
+                                <i class="fas fa-plus transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="faq-content h-0 overflow-hidden transition-all duration-300">
+                            <div class="p-8 text-gray-600 border-t border-gray-100 bg-gray-50">
+                                Admission is free if you pre-register for a visit.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="border-2 border-gray-100 rounded-lg overflow-hidden hover:border-brand-yellow transition-colors">
+                        <button class="faq-btn w-full px-8 py-5 text-left bg-white hover:bg-gray-50 flex justify-between items-center font-bold text-brand-dark focus:outline-none text-lg">
+                            <span>Q. Can I enter without a business card?</span>
+                            <span class="w-8 h-8 flex items-center justify-center rounded-full bg-brand-gray text-brand-orange">
+                                <i class="fas fa-plus transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="faq-content h-0 overflow-hidden transition-all duration-300">
+                            <div class="p-8 text-gray-600 border-t border-gray-100 bg-gray-50">
+                                As a rule, business cards are required as this is a BtoB exhibition. Please bring two business cards with you at reception.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="border-2 border-gray-100 rounded-lg overflow-hidden hover:border-brand-yellow transition-colors">
+                        <button class="faq-btn w-full px-8 py-5 text-left bg-white hover:bg-gray-50 flex justify-between items-center font-bold text-brand-dark focus:outline-none text-lg">
+                            <span>Q. How can I enter on more than one date during the two-day exhibition?</span>
+                            <span class="w-8 h-8 flex items-center justify-center rounded-full bg-brand-gray text-brand-orange">
+                                <i class="fas fa-plus transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="faq-content h-0 overflow-hidden transition-all duration-300">
+                            <div class="p-8 text-gray-600 border-t border-gray-100 bg-gray-50">
+                                One visitor pre-registration entitles you to admission for two days.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="border-2 border-gray-100 rounded-lg overflow-hidden hover:border-brand-yellow transition-colors">
+                        <button class="faq-btn w-full px-8 py-5 text-left bg-white hover:bg-gray-50 flex justify-between items-center font-bold text-brand-dark focus:outline-none text-lg">
+                            <span>Q. Is there parking at the venue?</span>
+                            <span class="w-8 h-8 flex items-center justify-center rounded-full bg-brand-gray text-brand-orange">
+                                <i class="fas fa-plus transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="faq-content h-0 overflow-hidden transition-all duration-300">
+                            <div class="p-8 text-gray-600 border-t border-gray-100 bg-gray-50">
+                                A total of approximately 500 parking spaces are available at Marine Messe Fukuoka Parking Lots 2, 3 and 4. Please use public transport as congestion is expected during the exhibition.<br>
+                                <a href="https://www.marinemesse.or.jp/eng/messe-b/access/" target="_blank">Access</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="border-2 border-gray-100 rounded-lg overflow-hidden hover:border-brand-yellow transition-colors">
+                        <button class="faq-btn w-full px-8 py-5 text-left bg-white hover:bg-gray-50 flex justify-between items-center font-bold text-brand-dark focus:outline-none text-lg">
+                            <span>Q. What if there is a problem entering the information in the visitor pre-registration form on this page?</span>
+                            <span class="w-8 h-8 flex items-center justify-center rounded-full bg-brand-gray text-brand-orange">
+                                <i class="fas fa-plus transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="faq-content h-0 overflow-hidden transition-all duration-300">
+                            <div class="p-8 text-gray-600 border-t border-gray-100 bg-gray-50">
+                                Please contact the Visitor Helpdesk.
+                                <p>
+SecretariatPhone <a href="tel:+81-3-3434-3453">+81-3-3434-3453</a><br>
+E-mail <a href="mail:kkhg@jma.or.jp">kkhg@jma.or.jp</a>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- FAQ Item 7 -->
+                    <div class="border-2 border-gray-100 rounded-lg overflow-hidden hover:border-brand-yellow transition-colors">
+                        <button class="faq-btn w-full px-8 py-5 text-left bg-white hover:bg-gray-50 flex justify-between items-center font-bold text-brand-dark focus:outline-none text-lg">
+                            <span>Q. How do I make a reservation if I am visiting with more than one person?</span>
+                            <span class="w-8 h-8 flex items-center justify-center rounded-full bg-brand-gray text-brand-orange">
+                                <i class="fas fa-plus transition-transform duration-300"></i>
+                            </span>
+                        </button>
+                        <div class="faq-content h-0 overflow-hidden transition-all duration-300">
+                            <div class="p-8 text-gray-600 border-t border-gray-100 bg-gray-50">
+                            Even when visiting as a group, each person must register individually. Please complete the visitor pre-registration for every attendee.
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-blue text-white pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h2 class="font-heading text-3xl font-extrabold mb-6">The 8th Kyushu/Okinawa
+Hospitality & Food Service Industry Exhibition<br>
+The 2nd Asia Export Food Exhibition</h2>
+                    <p class="text-blue-100 max-w-sm leading-relaxed">
+                    3-1-22 Shibakoen, Minato-ku, Tokyo 105-8522, Japan<br>
+
+Phone <a href="tel:+81-3-3434-3453">+81-3-3434-3453</a> | E-mail <a href="mail:kkhg@jma.or.jp">kkhg@jma.or.jp</a>
+                    </p>
+                </div>
+                <div class="flex flex-col md:items-end justify-center">
+                    <div class="bg-white/10 p-6 rounded-lg text-right">
+                        <p class="font-bold mb-2 text-brand-yellow">Venue Access</p>
+                        <p class="text-white">Marine Messe Fukuoka<br>7-1 Okihama-machi, Hakata-ku,<br>Fukuoka, 812-0031 Japan</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-blue-200">
+                <p>&copy; 2026 Japan Management Association. All Rights Reserved.</p>
+                <!-- <div class="flex gap-8 mt-6 md:mt-0 font-medium">
+                    <a href="#" class="hover:text-brand-orange transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-brand-orange transition-colors">Contact</a>
+                </div> -->
+            </div>
+        </div>
+    </footer>
+    <button 
+        id="back-to-top" 
+        class="fixed bottom-24 right-8 z-40 p-3 bg-[#EA7022] text-white rounded-full shadow-lg transition-all duration-300 opacity-0 invisible hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        aria-label="Back to top"
+    >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- 1. Sticky Navbar Effect ---
+            // 今回はヘッダーが常に白背景なので、スクロール時の影の追加のみ制御
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('shadow-lg');
+                    navbar.classList.remove('py-3');
+                    navbar.classList.add('py-2');
+                } else {
+                    navbar.classList.remove('shadow-lg');
+                    navbar.classList.add('py-3');
+                    navbar.classList.remove('py-2');
+                }
+            });
+
+            // --- 2. Mobile Menu Toggle ---
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                const isHidden = mobileMenu.classList.contains('translate-x-full');
+                if (isHidden) {
+                    mobileMenu.classList.remove('translate-x-full');
+                } else {
+                    mobileMenu.classList.add('translate-x-full');
+                }
+            }
+
+            mobileMenuBtn.addEventListener('click', toggleMenu);
+            closeMenuBtn.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+            // --- 3. Scroll Reveal Animation (Intersection Observer) ---
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+
+            // --- 4. Counter Animation ---
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = +entry.target.getAttribute('data-target');
+                        const duration = 2000; // ms
+                        const increment = target / (duration / 16); // 60fps
+                        
+                        let current = 0;
+                        const updateCounter = () => {
+                            current += increment;
+                            if (current < target) {
+                                entry.target.innerText = Math.ceil(current).toLocaleString();
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                entry.target.innerText = target.toLocaleString();
+                            }
+                        };
+                        updateCounter();
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.counter').forEach(el => {
+                counterObserver.observe(el);
+            });
+
+            // --- 5. FAQ Accordion ---
+            const faqBtns = document.querySelectorAll('.faq-btn');
+            
+            faqBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const content = btn.nextElementSibling;
+                    const icon = btn.querySelector('i');
+                    
+                    // Toggle current
+                    if (content.style.height && content.style.height !== '0px') {
+                        content.style.height = '0px';
+                        icon.classList.remove('fa-minus');
+                        icon.classList.add('fa-plus');
+                        // Reset rotation
+                        icon.parentElement.classList.remove('bg-brand-orange', 'text-white');
+                        icon.parentElement.classList.add('bg-brand-gray', 'text-brand-orange');
+
+                    } else {
+                        // Close others
+                        document.querySelectorAll('.faq-content').forEach(c => c.style.height = '0px');
+                        document.querySelectorAll('.faq-btn i').forEach(i => {
+                            i.classList.remove('fa-minus');
+                            i.classList.add('fa-plus');
+                            // Reset style
+                            i.parentElement.classList.remove('bg-brand-orange', 'text-white');
+                            i.parentElement.classList.add('bg-brand-gray', 'text-brand-orange');
+                        });
+
+                        content.style.height = content.scrollHeight + 'px';
+                        icon.classList.remove('fa-plus');
+                        icon.classList.add('fa-minus');
+                        // Active style
+                        icon.parentElement.classList.remove('bg-brand-gray', 'text-brand-orange');
+                        icon.parentElement.classList.add('bg-brand-orange', 'text-white');
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        // ボタン要素を取得
+        const backToTopButton = document.getElementById('back-to-top');
+
+        // スクロールイベントを監視
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                // 300px以上スクロールしたら表示
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                // それ以外は非表示
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        // クリックイベント（トップへスムーズに戻る）
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
