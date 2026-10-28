@@ -31,6 +31,8 @@
 .event-flash__status-dot { width: 10px; height: 10px; border-radius: 50%; background: #ff9b45; box-shadow: 0 0 0 6px rgba(255, 155, 69, .18); animation: event-flash-pulse 1.8s infinite; }
 @keyframes event-flash-pulse { 50% { box-shadow: 0 0 0 10px rgba(255, 155, 69, 0); } }
 .event-flash__results { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.event-flash__results--single { grid-template-columns: minmax(0, 1fr); }
+.event-flash [hidden] { display: none !important; }
 .event-flash__day { overflow: hidden; border: 1px solid #d9e2e9; border-radius: 18px; background: #fff; box-shadow: 0 16px 38px rgba(16, 47, 87, .09); }
 .event-flash__day--today { border-color: #9ecadd; box-shadow: 0 18px 42px rgba(23, 111, 157, .16); }
 .event-flash__day-head { display: flex; justify-content: space-between; gap: 18px; align-items: center; padding: 20px 24px; color: #fff; background: linear-gradient(120deg, var(--flash-navy), var(--flash-blue)); }
