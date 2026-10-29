@@ -60,6 +60,8 @@
 .event-flash__media-heading { display: flex; justify-content: space-between; gap: 40px; align-items: end; margin: 70px 0 22px; }
 .event-flash__media-heading h3 { margin: 0; color: var(--flash-navy); font-family: "Noto Serif JP", serif; font-size: 3rem; }
 .event-flash__media-heading > p { margin: 0; color: #5d6f82; font-size: 1.35rem; }
+.event-flash__movie { overflow: hidden; border-radius: 18px; background: #081b2d; box-shadow: 0 18px 42px rgba(16, 47, 87, .16); }
+.event-flash__movie video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #081b2d; object-fit: contain; }
 .event-flash__media-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; }
 .event-flash__video-placeholder, .event-flash__photo-placeholder { position: relative; display: grid; place-content: center; overflow: hidden; color: #fff; background: linear-gradient(145deg, #163657, #0d1c2c); }
 .event-flash__video-placeholder { min-height: 410px; border-radius: 18px; text-align: center; }
