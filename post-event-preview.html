@@ -123,8 +123,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .webguide-shortcut__arrow { width: 28px; height: 28px; font-size: 1.25rem; }
 }
 </style>
-<link rel="stylesheet" href="./venue-guide.css?v=20261006-3">
-<link rel="stylesheet" href="./post-event-preview.css?v=20261029-1">
+<link rel="stylesheet" href="https://ksh.jma.or.jp/css/parts/venue-map.css?2026v3">
+<link rel="stylesheet" href="https://ksh.jma.or.jp/css/parts/event-flash.css?2026v3">
 </head>
 <body class="index">
 <!-- Google Tag Manager (noscript) -->
@@ -547,10 +547,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   -->
 </section>
 
-<!-- 開催速報：支給後は data-status と各プレースホルダーを実データへ差し替え -->
 <section class="event-flash" id="event-flash" aria-labelledby="event-flash-title">
   <div class="event-flash__inner">
-    <p class="event-flash__preview-note">確認用プレビュー｜10月28日の来場速報を反映しています</p>
 
     <header class="event-flash__heading">
       <div>
@@ -562,43 +560,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="event-flash__status" role="status">
       <span class="event-flash__status-dot" aria-hidden="true"></span>
-      <strong>本日開催中</strong>
-      <span>10月28日（水）の来場者速報を更新しました</span>
+      <strong>会期終了</strong>
+      <span>2日間の最終来場者数を更新しました</span>
     </div>
 
-    <div class="event-flash__results event-flash__results--single" aria-label="2026年開催速報">
+    <div class="event-flash__results" aria-label="2026年開催速報">
       <article class="event-flash__day event-flash__day--today" data-day="2026-10-28">
         <div class="event-flash__day-head">
           <div><span>DAY 1</span><strong>10月28日（水）</strong></div>
         </div>
         <dl class="event-flash__metrics">
           <div><dt>来場者数</dt><dd><b data-field="visitors-1028">2,046</b><small>名</small></dd></div>
-          <div><dt>天気</dt><dd class="event-flash__weather" data-field="weather-1028">晴れ</dd></div>
+          <div><dt>天気</dt><dd class="event-flash__weather" data-field="weather-1028"><svg class="event-flash__weather-icon event-flash__weather-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><span>晴れ</span></dd></div>
           <div><dt>前年差</dt><dd><b data-field="difference-1028">+44</b><small>名</small></dd></div>
           <div><dt>前年比</dt><dd><b data-field="comparison-1028">102.2</b><small>%</small></dd></div>
         </dl>
         <p class="event-flash__previous">2025年同日：2,002名（前年差＋44名／前年比102.2％）</p>
       </article>
 
-      <article class="event-flash__day" data-day="2026-10-29" hidden>
+      <article class="event-flash__day" data-day="2026-10-29">
         <div class="event-flash__day-head">
           <div><span>DAY 2</span><strong>10月29日（木）</strong></div>
-          <em>会期終了後 更新</em>
+          <em>最終</em>
         </div>
         <dl class="event-flash__metrics">
-          <div><dt>来場者数</dt><dd><b data-field="visitors-1029">—</b><small>名</small></dd></div>
-          <div><dt>天気</dt><dd class="event-flash__weather" data-field="weather-1029">確認中</dd></div>
-          <div><dt>前年差</dt><dd><b data-field="difference-1029">—</b><small>名</small></dd></div>
-          <div><dt>前年比</dt><dd><b data-field="comparison-1029">—</b><small>%</small></dd></div>
+          <div><dt>来場者数</dt><dd><b data-field="visitors-1029">1,688</b><small>名</small></dd></div>
+          <div><dt>天気</dt><dd class="event-flash__weather" data-field="weather-1029"><svg class="event-flash__weather-icon event-flash__weather-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><span>晴れ</span></dd></div>
+          <div><dt>前年差</dt><dd><b data-field="difference-1029">+7</b><small>名</small></dd></div>
+          <div><dt>前年比</dt><dd><b data-field="comparison-1029">100.4</b><small>%</small></dd></div>
         </dl>
-        <p class="event-flash__previous">2025年同日：1,681名／雨のち晴れ</p>
+        <p class="event-flash__previous">2025年同日：1,681名（前年差＋7名／前年比100.4％）</p>
       </article>
     </div>
 
-    <article class="event-flash__total" aria-label="2日間合計" hidden>
+    <article class="event-flash__total" aria-label="2日間合計">
       <div><span>2 DAYS TOTAL</span><strong>2日間合計</strong></div>
-      <p><b data-field="visitors-total">—</b><small>名</small></p>
-      <p class="event-flash__total-compare">2025年合計 <strong>3,683名</strong><br>前年比 <strong data-field="comparison-total">—%</strong></p>
+      <p><b data-field="visitors-total">3,734</b><small>名</small></p>
+      <p class="event-flash__total-compare">2025年合計 <strong>3,683名</strong>（前年差＋51名）<br>前年比 <strong data-field="comparison-total">101.4%</strong></p>
     </article>
 
     <p class="event-flash__note">※来場者数は主催者発表の速報値です。後日、確定値へ更新する場合があります。</p>
@@ -610,67 +608,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="event-flash__movie">
-      <video controls playsinline preload="metadata" poster="./assets/kyuushuu-report-2026-poster.jpg" aria-label="10月28日 会場速報動画">
-        <source src="./assets/kyuushuu-report-2026.mp4" type="video/mp4">
+      <video controls playsinline preload="metadata" poster="https://ksh.jma.or.jp/images/index/event-flash/kyuushuu-report-2026-poster.jpg" aria-label="10月28日 会場速報動画">
+        <source src="https://ksh.jma.or.jp/images/index/event-flash/kyuushuu-report-2026.mp4" type="video/mp4">
         お使いのブラウザは動画の再生に対応していません。
       </video>
     </div>
   </div>
 </section>
 
-<section class="webguide-shortcuts" aria-labelledby="webguide-shortcuts-title">
-  <div class="webguide-shortcuts__inner">
-    <h2 class="webguide-shortcuts__heading" id="webguide-shortcuts-title">
-      <span>EXHIBITOR WEB GUIDE</span>
-      <strong>目的から、出展者・製品を探す</strong>
-    </h2>
-    <div class="webguide-shortcuts__grid">
-      <a class="webguide-shortcut webguide-shortcut--new" href="https://velsion.jp/kyusyu-2026/web-guide?features%5B%5D=%E6%96%B0%E8%A3%BD%E5%93%81" target="_blank" rel="noopener">
-        <span class="webguide-shortcut__icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48"><path d="M24 6 29 17l12 1-9 8 3 12-11-6-11 6 3-12-9-8 12-1 5-11Z"></path></svg>
-        </span>
-        <span class="webguide-shortcut__copy">
-          <span class="webguide-shortcut__en">NEW PRODUCTS</span>
-          <strong class="webguide-shortcut__catch">新商品検索</strong>
-          <span class="webguide-shortcut__label">注目の新製品・新商品を探す</span>
-        </span>
-        <span class="webguide-shortcut__arrow" aria-hidden="true">→</span>
-      </a>
-      <a class="webguide-shortcut webguide-shortcut--export" href="https://velsion.jp/kyusyu-2026/web-guide?features%5B%5D=%E8%BC%B8%E5%87%BA%E5%8F%AF" target="_blank" rel="noopener">
-        <span class="webguide-shortcut__icon" aria-hidden="true">
-          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"></circle><path d="M6 24h36M24 6c5 5 8 11 8 18s-3 13-8 18c-5-5-8-11-8-18s3-13 8-18Z"></path></svg>
-        </span>
-        <span class="webguide-shortcut__copy">
-          <span class="webguide-shortcut__en">EXPORT READY</span>
-          <strong class="webguide-shortcut__catch">輸出対応検索</strong>
-          <span class="webguide-shortcut__label">輸出対応の出展者・製品を探す</span>
-        </span>
-        <span class="webguide-shortcut__arrow" aria-hidden="true">→</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="venue-map-section venue-map-section--top" id="venue-map" aria-labelledby="venue-map-title">
-  <div class="venue-guide-inner">
-    <header class="venue-guide-heading">
-      <span class="venue-guide-heading__en">VENUE MAP</span>
-      <h2 id="venue-map-title">会場MAPを公開しました</h2>
-      <p>見たい展示や企画の位置を事前に確認して、限られた時間を効率よくご活用ください。</p>
-    </header>
-
-    <div class="venue-map-layout venue-map-layout--single">
-      <div class="venue-map-main">
-        <a class="venue-map-frame venue-map-frame--brochure" href="./assets/venue-map-2026-official.png" target="_blank" rel="noopener" aria-label="最新の会場MAPを大きく表示">
-          <img src="./assets/venue-map-2026-official.png" alt="マリンメッセ福岡B館の会場MAP。講演会A会場・B会場、ペットツーリズムモデルルーム、VIP・海外バイヤー商談ラウンジ、九州ライブキッチンステージ、出展ブースと入口を掲載" width="1772" height="944">
-          <span class="venue-map-frame__zoom">＋ 大きく見る</span>
-        </a>
-      </div>
+<section class="venue-map" id="venue-map" aria-labelledby="venue-map-title">
+  <div class="venue-map__inner">
+    <div class="venue-map__head">
+      <p class="venue-map__en">VENUE MAP</p>
+      <h2 class="venue-map__title" id="venue-map-title">会場MAPを公開しました</h2>
+      <p class="venue-map__lead">見たい展示や企画の位置を事前に確認して、限られた時間を効率よくご活用ください。</p>
     </div>
 
-    <div class="venue-map-actions">
-      <a class="venue-map-button" href="./assets/venue-map-2026-official.png" target="_blank" rel="noopener">会場MAPを大きく見る</a>
-      <a class="venue-map-button venue-map-button--outline" href="./visit.html#walk-guide">目的別・会場歩き方ガイド</a>
+    <a class="venue-map__frame" href="https://ksh.jma.or.jp/images/common/venue_map_2026_large.webp" target="_blank" rel="noopener" tabindex="-1">
+      <img src="https://ksh.jma.or.jp/images/common/venue_map_2026.webp" width="2240" height="1193" loading="lazy" decoding="async" alt="マリンメッセ福岡B館の会場MAP。講演会A会場・B会場、ペットツーリズムモデルルーム、VIP・海外バイヤー商談ラウンジ、九州ライブキッチンステージ、スタートアップエリア、各出展ブースの小間番号と出展者名、入口を掲載">
+    </a>
+    <p class="venue-map__zoom-row">
+      <a class="venue-map__zoom" href="https://ksh.jma.or.jp/images/common/venue_map_2026_large.webp" target="_blank" rel="noopener" aria-label="会場MAPを大きく表示（新しいタブで開きます）">＋ 大きく見る</a>
+    </p>
+
+    <div class="venue-map__actions">
+      <a class="btn-apply circle venue-map__dl" href="https://ksh.jma.or.jp/pdf/venue_map_2026.pdf" download="venue_map_2026.pdf">
+        <svg class="venue-map__dl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+        <span class="venue-map__dl-text">会場マップをダウンロード</span>
+      </a>
+      <p class="venue-map__file">PDF（A3・2ページ／約3MB）</p>
     </div>
   </div>
 </section>
