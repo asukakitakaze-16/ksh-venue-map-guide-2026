@@ -81,5 +81,6 @@
   .switch-hero { padding: 52px 18px; }
   .switch-hero__names { flex-direction: column; gap: 5px; }
   .exhibit-2027__grid { grid-template-columns: 1fr; }
-  .event-photo-gallery { grid-template-columns: 1fr; }
+  .event-photo-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
+  .event-photo-gallery img { border-radius: 6px; }
 }
