@@ -42,11 +42,22 @@
 
 .switch-hero--thanks { background: linear-gradient(135deg, #0d315c, #1f6792 62%, #d9872b 150%); }
 .switch-hero--thanks h1 span { display: block; margin-top: 12px; color: #fff; font-size: .47em; letter-spacing: .06em; }
-.switch-hero--image { padding: 0; background: #07537e; }
+.switch-hero--image {
+  padding: 0;
+  aspect-ratio: 2014 / 781;
+  background: #07537e url("./thanks-next-exhibition-2027.jpg") center / contain no-repeat;
+}
 .switch-hero--image::before,
 .switch-hero--image::after { display: none; }
 .switch-hero__banner-link { display: block; }
-.switch-hero__banner { display: block; width: 100%; height: auto; }
+.switch-hero__banner {
+  display: block !important;
+  width: 100% !important;
+  max-width: none !important;
+  height: auto !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -95,6 +106,8 @@
 
 @media (max-width: 767px) {
   .switch-hero { padding: 52px 18px; }
+  .switch-hero.switch-hero--image { padding: 0; }
+  .switch-hero__banner-link { display: block !important; width: 100%; }
   .switch-hero__names { flex-direction: column; gap: 5px; }
   .exhibit-2027__grid { grid-template-columns: 1fr; }
   .event-photo-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
